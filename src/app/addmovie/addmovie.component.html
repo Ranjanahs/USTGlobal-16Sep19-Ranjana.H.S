@@ -1,0 +1,34 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" [formGroup]="form"  (ngSubmit)="loginData(form)">
+        <h1 class="text-center bg-light text-black">Add Movie</h1>
+      
+        <div class="form-group">
+              <input type="text" name="email" id="email" class="form-control" placeholder="Add movie...." formControlname="email"> 
+              <div *ngIf="email.touched && email.invalid">
+                  <p *ngIf="email.errors.required" class="alert alert-danger">*This field is required</p>
+              </div>   
+          </div>
+      
+          <div class="form-group">
+              <input type="text" name="password" id="password" class="form-control" placeholder="Movie Title..." formControlname="password">
+               <div *ngIf="password.touched && password.invalid">
+                   <p class="alert alert-danger" *ngIf="password.errors.required">*This field is required</p>
+      
+               </div>
+          </div>
+
+          <div class="form-group">
+                <input type="text" name="password" id="password" class="form-control" placeholder="Movie Title..." formControlname="password">
+                 <div *ngIf="password.touched && password.invalid">
+                     <p class="alert alert-danger" *ngIf="password.errors.required">*This field is required</p>
+        
+                 </div>
+            </div>
+
+            <div class="form-group">
+                <textarea name="text" id="text" cols="60" rows="10" placeholder="Movie Description"></textarea>                   
+            </div>
+      
+          <div class="form-group">
+              <button type="submit" class="btn-btn float-left" [disabled]="form.invalid">Add</button>
+          </div>
+            </form>
