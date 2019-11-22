@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript</title>
+    <script>
+        var age=22;
+        console.log('Age='+age);
+        var name='Chota Bheem';
+        console.log('Name= '+name);
+        var hasHobbies=true;
+        console.log('Has Hobbies= '+hasHobbies);
+        var data=null;
+        console.log('data= '+data);
+        var married;
+        console.log('married= '+married);        
+    </script>
+</head>
+<body>
+    <script>
+        var fruits=['orange','mango','grapes','apple'];
+        console.log('fruits=',fruits);
+        console.log('fruit1=',fruits[0]);
+        console.log('fruits length=',fruits.length);
+
+        var person={
+            firstname : 'Ranjana',
+            lastname:'Sheshadri',
+            age: 22,
+            ph: 9876543210,
+            getfullname:function(){
+                return this.firstname+' '+this.lastname
+            }
+        }
+        var lastname=person.lastname
+        console.log('lastname:',lastname)
+        var personAge=person.age;
+        console.log('Age:',personAge);
+        var fullname=person.getfullname();
+        console.log('fullname:',fullname);
+
+    </script>
+    
+</body>
+</html>
