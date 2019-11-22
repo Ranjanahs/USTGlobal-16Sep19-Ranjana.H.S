@@ -1,0 +1,15 @@
+<div class="col-md-4 offset-md-4">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Search</span>
+            </div>
+            <input (input)="search($event)" class="form control ng-untouched ng-pristine ng-valid" type="search">
+        </div>
+    </div>
+    <div class="col-md-3 float-left card card-body" style="height: 350px" *ngFor="let title of values">
+        <h6>{{title.Title}}</h6>
+        <a href="{{title.Website}}"></a>
+        <img src="{{title.Poster}}" style="height: 250px" alt="">
+        
+    </div>
+    
