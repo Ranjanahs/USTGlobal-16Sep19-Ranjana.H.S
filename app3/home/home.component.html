@@ -1,0 +1,19 @@
+<h1>Home component</h1>
+<!-- <div class="col-md-8 offset-md-2 card card-body mt-5 " style="height:410px ; border: 1px solid black;width: 500px" > 
+    <div class="col-md-8 offset-md-2 card card-body mt-3" style=" border: 1px solid black">
+         <img [src]="img"  alt=""[class.rounded-circle]='isActive' 
+         style="margin-bottom:6px">
+         <h3 style="text-align: center;color: blue">Rose</h3>
+         </div>
+         </div>
+          -->
+<div class="container col-md-8 offset-2 card card-body" *ngFor="let new of news">
+    <img src="{{new.urlToImage}}" alt="">
+     <h1>{{new.title}}</h1>
+</div>
+         
+            
+            
+    
+
+

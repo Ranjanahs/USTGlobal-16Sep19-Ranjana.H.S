@@ -1,0 +1,49 @@
+
+<div class="col-md-6 offset-4 card card-body">
+    <form action="" #form='ngForm'>
+        <h1>Candidate info</h1>
+        <div class="form-group">
+            <input type="text" name='name' id='name' class="form-control" placeholder="candidate name"
+             #name='ngModel' ngModel required>
+
+        </div>
+        <div class="form-group">
+                <input type="text" name='year' id='year' class="form-control" placeholder="year of experience"
+                 #name='ngModel' ngModel required>
+         </div>
+         <div>
+         <label for="skills">skills</label><br>
+         <input type="radio" name="java" id="java">Java&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="radio" name="java" id="angular">Springs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="radio" name="java" id="sql">Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="radio" name="java" id="spring">SQL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+         </div> <br><br>
+        
+         <div class="form-group">
+            <input type="text" name='CCTC' id='CCTC' class="form-control" placeholder="CCTC"
+             #name='ngModel' ngModel required>
+
+        </div>
+        <div class="form-group">
+            <input type="text" name='ECTC' id='ECTC' class="form-control" placeholder="ECTC"
+             #name='ngModel' ngModel required>
+
+        </div>
+        <div class="form-group">
+            <input type="text" name='relocate' id='relocate' class="form-control" placeholder="Ready to relocate"
+             #name='ngModel' ngModel required>
+
+        </div>
+
+        <button type="submit" class="btn btn-success float-right">schudule interviw</button>     
+             
+             
+         
+    </form>
+
+</div>
+

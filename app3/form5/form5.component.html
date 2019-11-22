@@ -1,0 +1,39 @@
+
+<div class="col-md-6 offet-3 mt-5 card card-body">
+    <form action="" #form='ngForm'>
+        <h1>Product Info</h1>
+        <div class="form-group">
+            <input type="text" name='name' id='name' class="form-control" placeholder="product name"
+            #name='ngModel' ngModel required>
+        </div>
+        <div *ngIf='name.touched && name.invalid'>
+            <div *ngIf='name.errors.required' class="alert alert-danger">this field required</div>
+        </div>
+        <div class="form-group">
+                <input type="text" name='price' id='price' class="form-control" placeholder="product price"
+                #price='ngModel' ngModel required>
+            </div>
+            <div *ngIf='price.touched && price.invalid'>
+                    <div *ngIf='price.errors.required' class="alert alert-danger">this field required</div>
+                </div>
+            <div class="form-group">
+                    <input type="text" name='details' id='details' class="form-control" placeholder="product description"
+                    #details='ngModel' ngModel required>
+                </div>
+                <div *ngIf='details.touched && details.invalid'>
+                        <div *ngIf='details.errors.required' class="alert alert-danger">this field required</div>
+                    </div>
+                <div class="form-group">
+                        <input type="text" name='imgurl' id='imgurl' class="form-control" placeholder="product imgurl"
+                        #imgurl='ngModel' ngModel required>
+                    </div>
+                    <div *ngIf='imgurl.touched && imgurl.invalid'>
+                            <div *ngIf='imgurl.errors.required' class="alert alert-danger">this field required</div>
+                        </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-outline-success float-right">Add Product</button>
+                    </div>
+    </form>
+
+</div>
+
