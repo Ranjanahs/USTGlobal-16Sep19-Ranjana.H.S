@@ -1,0 +1,12 @@
+#grad{
+    height: 750px;
+    background: linear-gradient(to right,red,black,blue,green)
+    
+}
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
