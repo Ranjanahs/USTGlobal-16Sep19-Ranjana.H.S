@@ -1,0 +1,84 @@
+package com.ustglobal.phoneapp.main;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.ustglobal.phoneapp.dao.MobileDAO;
+import com.ustglobal.phoneapp.dto.MobileBean;
+import com.ustglobal.phoneapp.util.MobileManager;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("press 1 to Show all contacts");
+		System.out.println("Press 2 to Search for contact");
+		System.out.println("Press 3 to Operate on contact");
+
+		System.out.println("enter your choice");
+		int ch = sc.nextInt();
+		ArrayList<MobileBean> a = new ArrayList<MobileBean>();
+		switch (ch) {
+
+		case 1:
+			MobileDAO md= MobileManager.getInstance();
+			List<MobileBean> mb=md.allDetails();
+			for(MobileBean res :mb) { 
+				System.out.println("name---->"+res.getName());
+			}
+			break;
+
+		case 2:
+			MobileDAO md1= MobileManager.getInstance();
+			System.out.println("enter name to search details");
+			String n = sc.next();
+			MobileBean mb1=md1.searchContact(n);
+			if(mb1!=null) {
+
+				System.out.println("Name     :"+mb1.getName());
+				System.out.println("Salary   :"+mb1.getNumber());
+				System.out.println("group   :"+mb1.getGrup());
+
+			}else {
+				System.out.println("No data Found");
+			}
+
+			break;	
+		case 3:
+			System.out.println("press 1 to Show all contacts");
+			System.out.println("Press 2 to Search for contact");
+			System.out.println("Press 3 to Operate on contact");
+			System.out.println("enter your choice");        
+			int i = sc.nextInt();
+			switch (i) {
+			case 1:
+				MobileDAO md2= MobileManager.getInstance();
+				System.out.println("enter details");
+				
+				MobileBean m = new MobileBean();
+				m.setName(sc.next());
+				m.setNumber(sc.nextInt());
+				m.setGrup(sc.next());
+				int count = md2.insertContact(m);
+				System.out.println("data inserted");
+				break;
+			case 2:
+
+				break;
+			case 3:
+
+				break;
+			default:
+				break;
+			}
+
+			break;
+		default:
+			break;
+		}//end of switch case
+
+
+	}	//end of main method
+
+
+}//end of class

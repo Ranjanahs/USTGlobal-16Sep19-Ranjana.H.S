@@ -1,0 +1,153 @@
+package com.ustglobal.phoneapp.dao;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ustglobal.phoneapp.dto.MobileBean;
+
+public class MobileDAOImpl implements MobileDAO{
+
+	String url = "jdbc:mysql://localhost:3306:contactfiles?user=root&password=root";
+	Connection conn=null;
+	Statement stmt=null;
+	PreparedStatement pstmt=null;
+    ResultSet rs=null;
+	
+	@Override
+	public List<MobileBean> allDetails() {
+		try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			conn=DriverManager.getConnection(url);
+			stmt=conn.createStatement();
+		    String sql ="select * from contact";
+		    rs=stmt.executeQuery(sql);
+		    ArrayList<MobileBean> a = new ArrayList<MobileBean>();
+		    while(rs.next()) {
+		    	
+		    	
+		    	
+		    }//end of while
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+			if(conn!=null) conn.close();
+			if(stmt!=null)  stmt.close();
+			if(rs!=null)    rs.close(); 
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+	
+		
+		
+		return null;
+	}
+
+	@Override
+	public MobileBean searchContact(String name) {
+	
+try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			conn=DriverManager.getConnection(url);
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+			if(conn!=null) conn.close();
+			if(stmt!=null)  stmt.close();
+			if(rs!=null)    rs.close(); 
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+	
+		return null;
+	}
+
+	@Override
+	public int insertContact(MobileBean m) {
+try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			conn=DriverManager.getConnection(url);
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+			if(conn!=null) conn.close();
+			if(stmt!=null)  stmt.close();
+			if(rs!=null)    rs.close(); 
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+	
+		return 0;
+	}
+
+	@Override
+	public int updateContact(MobileBean m) {
+try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			conn=DriverManager.getConnection(url);
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+			if(conn!=null) conn.close();
+			if(stmt!=null)  stmt.close();
+			if(rs!=null)    rs.close(); 
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+	
+		return 0;
+	}
+
+	@Override
+	public int deleteContact(MobileBean m) {
+try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			conn=DriverManager.getConnection(url);
+			
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+			if(conn!=null) conn.close();
+			if(stmt!=null)  stmt.close();
+			if(rs!=null)    rs.close(); 
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+	
+		return 0;
+	}
+
+	
+}

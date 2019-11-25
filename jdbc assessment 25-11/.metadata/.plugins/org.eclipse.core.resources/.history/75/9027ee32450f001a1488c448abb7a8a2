@@ -1,0 +1,6 @@
+package com.ustglobal.phoneapp.dao;
+
+public class MobileDAOImpl implements MobileDAO{
+
+	
+}

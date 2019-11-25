@@ -1,0 +1,46 @@
+package com.ustglobal.phoneapp.dao;
+
+import java.util.List;
+
+import com.ustglobal.phoneapp.dto.MobileBean;
+
+public class MobileDAOImpl implements MobileDAO{
+
+	String url = "jdbc:mysql://localhost:3306:contactfiles?user=root&password=root";
+	
+	@Override
+	public List<MobileBean> allDetails() {
+		
+		
+	
+		
+		
+		return null;
+	}
+
+	@Override
+	public MobileBean searchContact(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insertContact(MobileBean m) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateContact(MobileBean m) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteContact(MobileBean m) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+}
