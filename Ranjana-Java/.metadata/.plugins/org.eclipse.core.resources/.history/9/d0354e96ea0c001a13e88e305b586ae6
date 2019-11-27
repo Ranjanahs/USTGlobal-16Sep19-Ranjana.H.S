@@ -1,0 +1,14 @@
+package com.ustglobal.jpawithhibernateapp.onetoone;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+
+@Data
+
+public class Voter_Card {
+int vid;
+String vname;
+
+
+}

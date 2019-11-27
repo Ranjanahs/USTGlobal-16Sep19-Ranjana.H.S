@@ -1,0 +1,5 @@
+package com.ustglobal.jdbcinhibernate.dto;
+
+public class Employee {
+
+}
