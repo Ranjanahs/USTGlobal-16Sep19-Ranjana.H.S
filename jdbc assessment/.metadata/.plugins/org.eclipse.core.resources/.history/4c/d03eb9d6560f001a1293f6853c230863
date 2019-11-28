@@ -1,0 +1,74 @@
+package com.ustglobal.MobileApps;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.ustglobal.MobileApp.Dao.MobileDao;
+import com.ustglobal.MobileApp.Dto.MobileBean;
+import com.ustglobal.MobileApp.Util.MobileManager;
+
+public class App {
+	public static void main(String[] args) {
+		System.out.println("Press 1 to Show all contacts");
+		System.out.println("Press 2 to Search for contact");
+		System.out.println("Press 3 to Operate on contacts");
+		
+		Scanner scn = new Scanner(System.in);
+		int ch = scn.nextInt();
+		
+		switch (ch) {
+		case 1:
+			MobileDao dao = MobileManager.getMobileDao();
+		    System.out.println("Display all contacts");
+		    List<MobileBean> res = dao.showContacts();
+		    for (MobileBean bean : res) {
+		    	System.out.println("name:"+bean.getName());
+		    	System.out.println("number:"+bean.getNumber());
+		    	System.out.println("groups:"+bean.getGroups());
+			}
+		break;
+        
+		case 2:MobileDao dao1 = MobileManager.getMobileDao();
+	           System.out.println("enter data to search");
+	           String name = scn.next();
+	           MobileBean res1 = dao1.searchContacts(name);
+	           if(res1!=null) {
+	           System.out.println(scn.next());
+	           System.out.println(scn.nextInt());
+	           System.out.println(scn.next());
+	           }else {
+	        	   switch(ch) {
+	        	   case 1:
+	        		    System.out.println("Press 1 to call");
+	        		    if(res1!=null) {
+	        		    	System.out.println("name:"+res1.getName());
+	        		           System.out.println("number:"+res1.getNumber());
+	        		           System.out.println("groups:"+res1.getGroups());
+    	
+	        		    }else {
+	        		    	return null;
+	        		    }
+	        	   case 2:
+	        		   System.out.println("Press 2 to message");
+	        		   
+	        		    
+	        	   }
+	           }
+	          return null;
+	          
+		}    
+	}
+	
+		case 3:
+			
+			MobileDao dao2 = MobileManager.getMobileDao();
+	   
+		   
+	   
+	    
+	    
+		
+		}
+	}
+
+}

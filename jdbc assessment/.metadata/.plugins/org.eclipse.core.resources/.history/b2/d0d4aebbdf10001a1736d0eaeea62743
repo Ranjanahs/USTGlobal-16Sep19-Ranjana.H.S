@@ -1,0 +1,127 @@
+package com.ustglobal.MobileApps;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.ustglobal.MobileApp.Dao.MobileDao;
+import com.ustglobal.MobileApp.Dto.MobileBean;
+import com.ustglobal.MobileApp.Util.MobileManager;
+
+public class App {
+	public static void main(String[] args) {
+		System.out.println("Press 1 to Show all contacts");
+		System.out.println("Press 2 to Search for contact");
+		System.out.println("Press 3 to Operate on contacts");
+
+		Scanner scn = new Scanner(System.in);
+		int ch = scn.nextInt();
+
+		switch (ch) {
+		case 1:
+			MobileDao dao = MobileManager.getMobileDao();
+			List<MobileBean> res = dao.showContacts();
+			for (MobileBean bean : res) {
+				System.out.println("name:"+bean.getName());
+				System.out.println("number:"+bean.getNumber());
+				System.out.println("groups:"+bean.getGroups());
+			}
+			break;
+
+		case 2: 
+			System.out.println("Press 1 to call");
+			System.out.println("Press 2 to msg");
+			System.out.println("Press 3 to go back to menu");
+			Scanner scn2 = new Scanner(System.in);
+			int ch2 = scn.nextInt();
+
+
+
+			switch(ch2) {
+			case 1: 
+				MobileDao dao5 = MobileManager.getMobileDao();
+				List<MobileBean> result5 = dao5.showContacts();
+				String name = scn.next();
+				MobileBean bean3 = dao5.searchContacts(name);
+
+				if(bean3!=null) {
+					System.out.println("name:"+bean3.getName());
+					System.out.println("number:"+bean3.getNumber());
+					System.out.println("groups:"+bean3.getGroups());
+				}else {
+					System.out.println("end call");
+				}
+				break;
+
+			case 2:
+				MobileDao dao6 = MobileManager.getMobileDao();
+				List<MobileBean> result6 = dao6.showContacts();
+				String msg  = scn.next();
+				System.out.println(msg);
+				break;
+
+			case 3:break;
+
+
+
+			}   
+			break;
+			
+		case 3:
+			System.out.println("Press 1 to insert data");
+			System.out.println("Press 2 to update data");
+			System.out.println("Press 3 to delete data");
+			Scanner scn1 = new Scanner(System.in);
+			int ch1 = scn.nextInt();
+
+			switch(ch1) {
+			case 1:
+				MobileDao dao3 = MobileManager.getMobileDao();
+				System.out.println("enter data to insert");
+				MobileBean bean = new MobileBean();
+				bean.setName(scn1.next());
+				bean.setNumber(scn1.nextInt());
+				bean.setGroups(scn1.next());
+				int count = dao3.insert(bean);
+				System.out.println(count+"rows inserted");
+				break;
+			case 2:
+				MobileDao dao4 = MobileManager.getMobileDao();
+				System.out.println("enter data to update");
+				MobileBean bean1 = new MobileBean();
+				bean1.setName(scn1.next());
+				bean1.setNumber(scn1.nextInt());
+				bean1.setGroups(scn1.next());
+				int count1 = dao4.update(bean1);
+				System.out.println(count1+"rows updated");
+				break;
+
+			case 3:
+				MobileDao dao7 = MobileManager.getMobileDao();
+				System.out.println("enter data to delete");
+				MobileBean bean2 = new MobileBean();
+				bean2.setName(scn1.next());
+				bean2.setNumber(scn1.nextInt());
+				bean2.setGroups(scn1.next());
+				int count2 = dao7.delete(bean2);
+				System.out.println(count2+"rows deleted");
+				break;
+			}
+
+
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

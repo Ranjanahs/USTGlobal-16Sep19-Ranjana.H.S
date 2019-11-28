@@ -1,0 +1,10 @@
+package com.ustglobal.MobileApp.Dto;
+
+public class MobileBean {
+  private String name;
+  private int number;
+  private String groups;
+	
+	
+	
+}

@@ -1,0 +1,27 @@
+package com.ustglobal.MobileApp.Dao;
+
+import java.util.List;
+
+import com.ustglobal.MobileApp.Dto.MobileBean;
+
+public class MobileDaoImpl implements MobileDao {
+
+	@Override
+	public List<MobileBean> showContacts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MobileBean searchContacts(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int operate(MobileBean bean) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
